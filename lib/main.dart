@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
           leading: Icon(Icons.app_registration_rounded),
         ),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Center(
               child: Container(
