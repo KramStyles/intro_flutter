@@ -51,6 +51,37 @@ class MyApp extends StatelessWidget {
                   )
                 ]
             )),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  // border: InputBorder.none,
+                  border: OutlineInputBorder(),
+                  contentPadding: EdgeInsets.all(20),
+                  labelText: "Name: ",
+                  hintText: "Enter your Name: ",
+                  labelStyle: TextStyle(
+                    color: Colors.grey
+                  )
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextField(
+                obscureText: true,
+                obscuringCharacter: '#',
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  contentPadding: EdgeInsets.all(20),
+                  labelText: "Password: ",
+                  hintText: "Enter Security Key: ",
+                  labelStyle: TextStyle(
+                    color: Colors.grey,
+                  )
+                ),
+              ),
             )
 
           ],
