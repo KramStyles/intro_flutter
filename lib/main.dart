@@ -8,6 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Little Register",
       home: Scaffold(
         backgroundColor: Colors.white,
@@ -44,7 +45,7 @@ class MyApp extends StatelessWidget {
             ),
             Container(
               decoration: BoxDecoration(
-                color: Colors.blue,
+                color: Colors.blue.shade300,
                 borderRadius: BorderRadius.circular(10),
               ),
               child: const Padding(
@@ -55,12 +56,90 @@ class MyApp extends StatelessWidget {
                     hintStyle: TextStyle(color: Colors.white60),
                     hintText: 'Michael Jamie',
                     contentPadding: EdgeInsets.all(10),
-                    icon: Icon(Icons.person),
+                    icon: Icon(Icons.person, color: Colors.white60,),
                   ),
                 ),
               ),
-              margin: EdgeInsets.only(top: 20, bottom: 20, right: 25, left: 25),
-            )
+              margin: const EdgeInsets.only(top: 10, bottom: 10, right: 25, left: 25),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.blue.shade300,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: const Padding(
+                padding: EdgeInsets.only(left: 10, right: 10),
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintStyle: TextStyle(color: Colors.white60),
+                    hintText: '@karm_designs',
+                    contentPadding: EdgeInsets.all(10),
+                    icon: Icon(Icons.verified_user, color: Colors.white60,),
+                  ),
+                ),
+              ),
+              margin: const EdgeInsets.only(top: 10, bottom: 10, right: 25, left: 25),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.blue.shade300,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: const Padding(
+                padding: EdgeInsets.only(left: 10, right: 10),
+                child: TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintStyle: TextStyle(color: Colors.white60),
+                    hintText: 'password',
+                    contentPadding: EdgeInsets.all(10),
+                    icon: Icon(Icons.password, color: Colors.white60,),
+                  ),
+                ),
+              ),
+              margin: const EdgeInsets.only(top: 10, bottom: 10, right: 25, left: 25),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.blue.shade300,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: const Padding(
+                padding: EdgeInsets.only(left: 10, right: 10),
+                child: TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintStyle: TextStyle(color: Colors.white60),
+                    hintText: 'confirm password',
+                    contentPadding: EdgeInsets.all(10),
+                    icon: Icon(Icons.lock, color: Colors.white60,),
+                  ),
+                ),
+              ),
+              margin: const EdgeInsets.only(top: 10, bottom: 10, right: 25, left: 25),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.blue.shade300,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: const Padding(
+                padding: EdgeInsets.only(left: 10, right: 10),
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintStyle: TextStyle(color: Colors.white60),
+                    hintText: 'Github',
+                    contentPadding: EdgeInsets.all(10),
+                    icon: Icon(Icons.link, color: Colors.white60,),
+                  ),
+                ),
+              ),
+              margin: const EdgeInsets.only(top: 10, bottom: 10, right: 25, left: 25),
+            ),
           ],
         ),
       ),
