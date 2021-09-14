@@ -8,92 +8,54 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: "Rows & Columns",
-        home: Scaffold(
-            backgroundColor: Colors.limeAccent,
-            appBar: AppBar(
-              title: Text("Columns & Rows"),
-              backgroundColor: Colors.yellow,
-              leading: Icon(Icons.add_moderator_outlined),
-            ),
-            body: Column(
-              // mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly, // More like justify content
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisSize: MainAxisSize.max,
-              children: <Widget>[
-                Row(
-                  children: <Widget>[
-                    Container(
-                        height: 50,
-                        width: 100,
-                        margin: EdgeInsets.all(10),
-                        color: Colors.white,
-                        alignment: Alignment.center,
-                        child: Text("Heyy")),
-                    Container(
-                        height: 50,
-                        width: 100,
-                        margin: EdgeInsets.all(10),
-                        alignment: Alignment.center,
-                        color: Colors.blueAccent,
-                        child: Text("Single")),
-                    Container(
-                        height: 50,
-                        width: 100,
-                        margin: EdgeInsets.all(10),
-                        alignment: Alignment.center,
-                        color: Colors.white,
-                        child: Text("Story"))
-                  ],
-                ),
-                Row(
-                  children: <Widget>[
-                    Container(
-                        height: 50,
-                        width: 100,
-                        margin: EdgeInsets.all(10),
-                        color: Colors.white,
-                        alignment: Alignment.center,
-                        child: Text("Heyy")),
-                    Container(
-                        height: 50,
-                        width: 100,
-                        margin: EdgeInsets.all(10),
-                        alignment: Alignment.center,
-                        color: Colors.blueAccent,
-                        child: Text("Single")),
-                    Container(
-                        height: 50,
-                        width: 100,
-                        margin: EdgeInsets.all(10),
-                        alignment: Alignment.center,
-                        color: Colors.white,
-                        child: Text("Story"))
+      title: "Text & Properties",
+      home: Scaffold(
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+          title: const Text("Text | Properties")
+        ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const Text(
+              'Hello and welcome to this lengthy text. There is no limit to the height and width of the container. ',
+              style: TextStyle(
+                  color: Colors.blueAccent,
+                  fontSize: 20,
+                  fontStyle: FontStyle.italic,
+                  fontWeight: FontWeight.w700,
+                  letterSpacing: 4.0,
+                  wordSpacing: 10,
+                  shadows: [
+                    Shadow(
+                        color: Colors.lightGreen, offset: Offset(3.0, 2.0)
+                    )
                   ]
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: RichText(text: TextSpan(
+                text: 'Hello There',
+                style: TextStyle(
+                  color: Colors.amber,
                 ),
-                Container(
-                    height: 50,
-                    width: 100,
-                    margin: EdgeInsets.all(10),
-                    color: Colors.white,
-                    alignment: Alignment.center,
-                    child: Text("Heyy")),
-                Container(
-                    height: 50,
-                    width: 100,
-                    margin: EdgeInsets.all(10),
-                    alignment: Alignment.center,
-                    color: Colors.blueAccent,
-                    child: Text("Single")),
-                Container(
-                    height: 50,
-                    width: 100,
-                    margin: EdgeInsets.all(10),
-                    alignment: Alignment.center,
-                    color: Colors.white,
-                    child: Text("Story"))
-              ],
-            )));
+                children: <TextSpan>[
+                  TextSpan(
+                      text: ' Coders',
+                    style: TextStyle(
+                      color: Colors.blueAccent
+                    )
+                  )
+                ]
+            )),
+            )
+
+          ],
+        ),
+      )
+    );
   }
 }
