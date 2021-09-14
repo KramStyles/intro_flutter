@@ -8,85 +8,62 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Text & Properties",
+      title: "Little Register",
       home: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          backgroundColor: Colors.black,
-          title: const Text("Text | Properties")
+          title: const Text("Registration!"),
+          backgroundColor: Colors.blue,
+          titleTextStyle: TextStyle(
+              fontSize: 20,
+              shadows: [Shadow(color: Colors.blueGrey, offset: Offset(1, 1))]),
+          leading: Icon(Icons.app_registration_rounded),
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text(
-              'Hello and welcome to this lengthy text. There is no limit to the height and width of the container. ',
-              style: TextStyle(
-                  color: Colors.blueAccent,
-                  fontSize: 20,
-                  fontStyle: FontStyle.italic,
-                  fontWeight: FontWeight.w700,
-                  letterSpacing: 4.0,
-                  wordSpacing: 10,
-                  shadows: [
-                    Shadow(
-                        color: Colors.lightGreen, offset: Offset(3.0, 2.0)
-                    )
-                  ]
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: RichText(text: TextSpan(
-                text: 'Hello There',
-                style: TextStyle(
-                  color: Colors.amber,
-                ),
-                children: <TextSpan>[
-                  TextSpan(
-                      text: ' Coders',
-                    style: TextStyle(
-                      color: Colors.blueAccent
-                    )
-                  )
-                ]
-            )),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextField(
-                decoration: InputDecoration(
-                  // border: InputBorder.none,
-                  border: OutlineInputBorder(),
-                  contentPadding: EdgeInsets.all(20),
-                  labelText: "Name: ",
-                  hintText: "Enter your Name: ",
-                  labelStyle: TextStyle(
-                    color: Colors.grey
-                  )
+            Center(
+              child: Container(
+                height: 100,
+                width: 100,
+                padding: EdgeInsets.all(10),
+                margin: EdgeInsets.only(top: 30),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(100),
+                    color: Colors.blue,
+                    border: Border.all(color: Colors.white60, width: 2)),
+                child: Text(
+                  "M",
+                  style: TextStyle(
+                    fontSize: 70,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.white60,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextField(
-                obscureText: true,
-                obscuringCharacter: '#',
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  contentPadding: EdgeInsets.all(20),
-                  labelText: "Password: ",
-                  hintText: "Enter Security Key: ",
-                  labelStyle: TextStyle(
-                    color: Colors.grey,
-                  )
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: const Padding(
+                padding: EdgeInsets.only(left: 10, right: 10),
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintStyle: TextStyle(color: Colors.white60),
+                    hintText: 'Michael Jamie',
+                    contentPadding: EdgeInsets.all(10),
+                    icon: Icon(Icons.person),
+                  ),
                 ),
               ),
+              margin: EdgeInsets.only(top: 20, bottom: 20, right: 25, left: 25),
             )
-
           ],
         ),
-      )
+      ),
     );
   }
 }
