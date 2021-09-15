@@ -162,9 +162,11 @@ class MyApp extends StatelessWidget {
                   top: 10, bottom: 10, right: 25, left: 25),
             ),
             // const FlatButton(onPressed: null, child: Text("Hello", style: TextStyle(fontSize: 20),), color: Colors.lightBlueAccent, textColor: Colors.white),
-              const TextButton(onPressed: null, child: Text("Update", style: TextStyle(fontSize: 20, backgroundColor: Colors.black, color: Colors.white),)),
-              const RaisedButton(onPressed: null, child: Text("Raised"), textColor: Colors.black, color: Colors.white, splashColor: Colors.green,),
-              const ElevatedButton(onPressed: null, child: Text("Raised")),
+            //   const TextButton(onPressed: null, child: Text("Update", style: TextStyle(fontSize: 20, backgroundColor: Colors.black, color: Colors.white),)),
+            //   const RaisedButton(onPressed: null, child: Text("Raised"), textColor: Colors.black, color: Colors.white, splashColor: Colors.green,),
+              ElevatedButton(onPressed: null, child: Text("Raised"), style: ButtonStyle(foregroundColor: MaterialStateProperty.all<Color>(Colors.red), backgroundColor: MaterialStateProperty.all<Color>(Colors.blueGrey.shade50),
+              elevation: MaterialStateProperty.all(2)),),
+             TextButton(onPressed: () { }, child: const Text('Update'), style: ButtonStyle(foregroundColor: MaterialStateProperty.all<Color>(Colors.blue)),)
 
           ],
         ),
