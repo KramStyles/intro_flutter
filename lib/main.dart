@@ -15,13 +15,13 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Registration!"),
           backgroundColor: Colors.blue,
-          titleTextStyle: TextStyle(
+          titleTextStyle: const TextStyle(
               fontSize: 20,
               shadows: [Shadow(color: Colors.blueGrey, offset: Offset(1, 1))]),
-          leading: Icon(Icons.app_registration_rounded),
+          leading: const Icon(Icons.app_registration_rounded),
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Center(
               child: Container(
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
                     borderRadius: BorderRadius.circular(100),
                     color: Colors.blue,
                     border: Border.all(color: Colors.white60, width: 2)),
-                child: Text(
+                child: const Text(
                   "M",
                   style: TextStyle(
                     fontSize: 70,
@@ -57,11 +57,15 @@ class MyApp extends StatelessWidget {
                     hintStyle: TextStyle(color: Colors.white60),
                     hintText: 'Michael Jamie',
                     contentPadding: EdgeInsets.all(10),
-                    icon: Icon(Icons.person, color: Colors.white60,),
+                    icon: Icon(
+                      Icons.person,
+                      color: Colors.white60,
+                    ),
                   ),
                 ),
               ),
-              margin: const EdgeInsets.only(top: 10, bottom: 10, right: 25, left: 25),
+              margin: const EdgeInsets.only(
+                  top: 10, bottom: 10, right: 25, left: 25),
             ),
             Container(
               decoration: BoxDecoration(
@@ -76,11 +80,15 @@ class MyApp extends StatelessWidget {
                     hintStyle: TextStyle(color: Colors.white60),
                     hintText: '@karm_designs',
                     contentPadding: EdgeInsets.all(10),
-                    icon: Icon(Icons.verified_user, color: Colors.white60,),
+                    icon: Icon(
+                      Icons.verified_user,
+                      color: Colors.white60,
+                    ),
                   ),
                 ),
               ),
-              margin: const EdgeInsets.only(top: 10, bottom: 10, right: 25, left: 25),
+              margin: const EdgeInsets.only(
+                  top: 10, bottom: 10, right: 25, left: 25),
             ),
             Container(
               decoration: BoxDecoration(
@@ -96,11 +104,15 @@ class MyApp extends StatelessWidget {
                     hintStyle: TextStyle(color: Colors.white60),
                     hintText: 'password',
                     contentPadding: EdgeInsets.all(10),
-                    icon: Icon(Icons.password, color: Colors.white60,),
+                    icon: Icon(
+                      Icons.password,
+                      color: Colors.white60,
+                    ),
                   ),
                 ),
               ),
-              margin: const EdgeInsets.only(top: 10, bottom: 10, right: 25, left: 25),
+              margin: const EdgeInsets.only(
+                  top: 10, bottom: 10, right: 25, left: 25),
             ),
             Container(
               decoration: BoxDecoration(
@@ -116,11 +128,15 @@ class MyApp extends StatelessWidget {
                     hintStyle: TextStyle(color: Colors.white60),
                     hintText: 'confirm password',
                     contentPadding: EdgeInsets.all(10),
-                    icon: Icon(Icons.lock, color: Colors.white60,),
+                    icon: Icon(
+                      Icons.lock,
+                      color: Colors.white60,
+                    ),
                   ),
                 ),
               ),
-              margin: const EdgeInsets.only(top: 10, bottom: 10, right: 25, left: 25),
+              margin: const EdgeInsets.only(
+                  top: 10, bottom: 10, right: 25, left: 25),
             ),
             Container(
               decoration: BoxDecoration(
@@ -135,12 +151,21 @@ class MyApp extends StatelessWidget {
                     hintStyle: TextStyle(color: Colors.white60),
                     hintText: 'Github',
                     contentPadding: EdgeInsets.all(10),
-                    icon: Icon(Icons.link, color: Colors.white60,),
+                    icon: Icon(
+                      Icons.link,
+                      color: Colors.white60,
+                    ),
                   ),
                 ),
               ),
-              margin: const EdgeInsets.only(top: 10, bottom: 10, right: 25, left: 25),
+              margin: const EdgeInsets.only(
+                  top: 10, bottom: 10, right: 25, left: 25),
             ),
+            // const FlatButton(onPressed: null, child: Text("Hello", style: TextStyle(fontSize: 20),), color: Colors.lightBlueAccent, textColor: Colors.white),
+              const TextButton(onPressed: null, child: Text("Update", style: TextStyle(fontSize: 20, backgroundColor: Colors.black, color: Colors.white),)),
+              const RaisedButton(onPressed: null, child: Text("Raised"), textColor: Colors.black, color: Colors.white, splashColor: Colors.green,),
+              const ElevatedButton(onPressed: null, child: Text("Raised")),
+
           ],
         ),
       ),
